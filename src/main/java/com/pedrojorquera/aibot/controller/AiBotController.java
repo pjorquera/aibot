@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class AiBotController {
 
-    private AiBotAgent agent;
+    private final AiBotAgent agent;
 
     AiBotController(AiBotAgent agent) {
         this.agent = agent;
