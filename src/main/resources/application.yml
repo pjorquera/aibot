@@ -1,0 +1,3 @@
+spring.application.name: aibot
+spring.ai.openai.chat.options.model: gpt-3.5-turbo
+spring.ai.openai.api-key: ** PUT HERE YOUR SECRET KEY **
