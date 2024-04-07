@@ -1,5 +1,6 @@
 package com.pedrojorquera.aibot.agent;
 
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
 import org.springframework.boot.ApplicationRunner;
@@ -16,6 +17,7 @@ public class AiBotConfig {
         return AiServices.builder(AiBotAgent.class)
                 .chatLanguageModel(model)
                 .tools(new AiBotTools())
+                .chatMemory(MessageWindowChatMemory.withMaxMessages(30))
                 .build();
     }
 
