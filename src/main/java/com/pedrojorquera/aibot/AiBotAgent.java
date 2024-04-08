@@ -1,12 +1,15 @@
-package com.pedrojorquera.aibot.agent;
+package com.pedrojorquera.aibot;
 
 import dev.langchain4j.agent.tool.Tool;
+import dev.langchain4j.service.spring.AiService;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Map;
 
-public class AiBotTools {
+@Component
+class AiBotTools {
 
     @Tool("Get my personal info")
     Map<String, Object> getPersonalInfo() {
@@ -21,4 +24,9 @@ public class AiBotTools {
     Date getCurrentTime() {
         return new Date();
     }
+}
+
+@AiService(tools = "aiBotTools")
+public interface AiBotAgent {
+    String chat(String input);
 }
