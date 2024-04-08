@@ -21,6 +21,10 @@ repositories {
 	mavenCentral()
 }
 
+bootRun {
+    standardInput = System.in
+}
+
 dependencies {
 	implementation 'dev.langchain4j:langchain4j-spring-boot-starter:0.29.1'
 	implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot-starter:0.29.1'
