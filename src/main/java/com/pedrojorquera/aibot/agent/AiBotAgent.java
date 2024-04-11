@@ -68,7 +68,7 @@ class AiBotTools {
     }
 
     @Tool("Create policy and retrieve its ID")
-    String createTodoAndRetrieveID(Policy.Type type, String description, double price) {
+    String createPolicyAndRetrieveID(Policy.Type type, String description, double price) {
         return policyRepository.save(new Policy(type, description, price, new Date())).getId();
     }
 
