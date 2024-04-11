@@ -1,5 +1,7 @@
 ## AI Bot
 
+![build workflow](https://github.com/pjorquera/aibot/actions/workflows/build.yml/badge.svg)
+
 AI Bot based on:
 
 * Spring Boot
@@ -17,7 +19,7 @@ listen to them and cancel the policies they want. You are authorized to apply a 
 customer chooses if and only if the customer has contracted a new one of the same type in the last 180 seconds.
 ```
 
-![build workflow](https://github.com/pjorquera/aibot/actions/workflows/build.yml/badge.svg)
+The AI Bot Agent interacts with a Couchbase server ()
 
 # Building
 
@@ -32,6 +34,14 @@ docker run -d --name db -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 couchb
 ```
 
 # Running
+
+Access Couchbase server at http://localhost:8091 and configure cluster:
+
+* Cluster name: MAPFRE
+* Password: `password`
+* Create bucket: `policies`
+
+After that, start the AI Agent Bot with:
 
 ```
 ./gradlew bootRun --console=plain --args='--langchain4j.open-ai.chat-model.api-key=PUT_HERE_YOUR_API_KEY'
