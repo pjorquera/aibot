@@ -19,12 +19,40 @@ listen to them and cancel the policies they want. You are authorized to apply a 
 customer chooses if and only if the customer has contracted a new one of the same type in the last 180 seconds.
 ```
 
-The AI Bot Agent interacts with a Couchbase server ()
+The AI Bot Agent interacts with a Couchbase server that syncs its content with a Ionic/Angular frontend App using PouchDB.
+
+# Requisites
+
+* Java 21
+* Node 20 / NPM 10
+
+# Creation
+
+## Agent
+
+Created from start.spring.io with support for Lombok and Spring Data Couchbase.
+
+## Frontend
+
+Created with:
+
+```
+ionic start frontend list --type=angular-standalone
+```
 
 # Building
 
+## Agent
+
 ```
 ./gradlew build
+```
+
+## Frontend
+
+```
+cd frontend
+npm run build
 ```
 
 # Starting Couchbase server
