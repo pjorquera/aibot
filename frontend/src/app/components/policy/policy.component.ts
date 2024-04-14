@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { Platform, IonItem, IonLabel, IonNote, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { chevronForward } from 'ionicons/icons';
-import { Policy } from '../services/data.service';
+import { Policy } from '../../model/policy';
 
 @Component({
   selector: 'app-policy',

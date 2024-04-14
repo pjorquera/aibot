@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Platform, IonHeader, IonToolbar, IonButtons, IonBackButton, IonContent, IonItem, IonIcon, IonLabel, IonNote } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { personCircle } from 'ionicons/icons';
-import { DataService, Policy } from '../services/data.service';
+import { Policy } from '../../model/policy';
 
 @Component({
   selector: 'app-detail',
@@ -15,7 +15,6 @@ import { DataService, Policy } from '../services/data.service';
 })
 export class DetailPage implements OnInit {
   public policy!: Policy;
-  private data = inject(DataService);
   private activatedRoute = inject(ActivatedRoute);
   private platform = inject(Platform);
 
@@ -25,7 +24,10 @@ export class DetailPage implements OnInit {
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id') as string;
-    this.policy = this.data.getPolicyById(parseInt(id, 10));
+
+    // this.policy = this.data.getPolicyById(parseInt(id, 10));
+    // TODO: Retrieve policy from PouchDB
+  
   }
 
   getBackButtonText() {
