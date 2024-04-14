@@ -4,17 +4,17 @@ import { ActivatedRoute } from '@angular/router';
 import { Platform, IonHeader, IonToolbar, IonButtons, IonBackButton, IonContent, IonItem, IonIcon, IonLabel, IonNote } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { personCircle } from 'ionicons/icons';
-import { DataService, Message } from '../services/data.service';
+import { DataService, Policy } from '../services/data.service';
 
 @Component({
-  selector: 'app-view-message',
-  templateUrl: './view-message.page.html',
-  styleUrls: ['./view-message.page.scss'],
+  selector: 'app-detail',
+  templateUrl: './detail.page.html',
+  styleUrls: ['./detail.page.scss'],
   standalone: true,
   imports: [CommonModule, IonHeader, IonToolbar, IonButtons, IonBackButton, IonContent, IonItem, IonIcon, IonLabel, IonNote],
 })
-export class ViewMessagePage implements OnInit {
-  public message!: Message;
+export class DetailPage implements OnInit {
+  public policy!: Policy;
   private data = inject(DataService);
   private activatedRoute = inject(ActivatedRoute);
   private platform = inject(Platform);
@@ -25,7 +25,7 @@ export class ViewMessagePage implements OnInit {
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id') as string;
-    this.message = this.data.getMessageById(parseInt(id, 10));
+    this.policy = this.data.getPolicyById(parseInt(id, 10));
   }
 
   getBackButtonText() {

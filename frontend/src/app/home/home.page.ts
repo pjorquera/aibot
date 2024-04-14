@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RefresherCustomEvent, IonHeader, IonToolbar, IonTitle, IonContent, IonRefresher, IonRefresherContent, IonList } from '@ionic/angular/standalone';
-import { MessageComponent } from '../message/message.component';
+import { PolicyComponent } from '../policy/policy.component';
 
-import { DataService, Message } from '../services/data.service';
+import { DataService, Policy } from '../services/data.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonHeader, IonToolbar, IonTitle, IonContent, IonRefresher, IonRefresherContent, IonList, MessageComponent],
+  imports: [CommonModule, IonHeader, IonToolbar, IonTitle, IonContent, IonRefresher, IonRefresherContent, IonList, PolicyComponent],
 })
 export class HomePage {
   private data = inject(DataService);
@@ -22,7 +22,7 @@ export class HomePage {
     }, 3000);
   }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
+  getPolicies(): Policy[] {
+    return this.data.getPolicies();
   }
 }
