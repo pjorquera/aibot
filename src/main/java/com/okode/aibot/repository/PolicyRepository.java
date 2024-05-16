@@ -1,6 +1,6 @@
-package com.pedrojorquera.aibot.repository;
+package com.okode.aibot.repository;
 
-import com.pedrojorquera.aibot.model.Policy;
+import com.okode.aibot.model.Policy;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Date;

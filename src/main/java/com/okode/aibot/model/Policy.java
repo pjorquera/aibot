@@ -1,4 +1,4 @@
-package com.pedrojorquera.aibot.model;
+package com.okode.aibot.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

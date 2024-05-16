@@ -1,7 +1,7 @@
-package com.pedrojorquera.aibot.agent;
+package com.okode.aibot.agent;
 
-import com.pedrojorquera.aibot.model.Policy;
-import com.pedrojorquera.aibot.repository.PolicyRepository;
+import com.okode.aibot.model.Policy;
+import com.okode.aibot.repository.PolicyRepository;
 import dev.langchain4j.agent.tool.Tool;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
