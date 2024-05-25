@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.5'
-	id 'io.spring.dependency-management' version '1.1.4'
+	id 'org.springframework.boot' version '3.3.0'
+	id 'io.spring.dependency-management' version '1.1.5'
 }
 
 group = 'com.okode'
@@ -26,8 +26,8 @@ bootRun {
 }
 
 dependencies {
-	implementation 'dev.langchain4j:langchain4j-spring-boot-starter:0.30.0'
-	implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot-starter:0.30.0'
+	implementation 'dev.langchain4j:langchain4j-spring-boot-starter:0.31.0'
+	implementation 'dev.langchain4j:langchain4j-open-ai-spring-boot-starter:0.31.0'
 	implementation 'org.springframework.boot:spring-boot-starter-data-couchbase'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
