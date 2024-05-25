@@ -1,6 +1,6 @@
 ## AI Bot
 
-![build workflow](https://github.com/pjorquera/aibot/actions/workflows/build.yml/badge.svg)
+![build workflow](https://github.com/okode/aibot/actions/workflows/build.yml/badge.svg)
 
 AI Bot based on:
 
