@@ -2,12 +2,4 @@ langchain4j.open-ai.chat-model:
   api-key: PUT_HERE_YOUR_API_KEY
   model-name: gpt-4-turbo-preview
 
-spring.couchbase:
-  connection-string: couchbase://127.0.0.1
-  username: Administrator
-  password: password
-spring.data.couchbase:
-  bucket-name: policies
-  auto-index: true
-
 logging.level.root: OFF

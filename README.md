@@ -19,18 +19,18 @@ listen to them and cancel the policies they want. You are authorized to apply a 
 customer chooses if and only if the customer has contracted a new one of the same type in the last 180 seconds.
 ```
 
-The AI Bot Agent interacts with a Couchbase server that syncs its content with a Ionic/Angular frontend App using PouchDB.
+The AI Bot Agent interacts with a MongoDB server that syncs its content with a Ionic/Angular frontend App.
 
 # Requisites
 
-* Java 21
+* Java 22
 * Node 20 / NPM 10
 
 # Creation
 
 ## Agent
 
-Created from start.spring.io with support for Lombok and Spring Data Couchbase.
+Created from start.spring.io with support for Lombok and Spring Data MongoDB.
 
 ## Frontend
 
@@ -55,21 +55,15 @@ cd frontend
 npm run build
 ```
 
-# Starting Couchbase server
+# Starting MongoDB server
 
 ```
-docker run -d --name db -p 8091-8096:8091-8096 -p 11210-11211:11210-11211 couchbase
+docker run -itd -p 27017:27017 mongo
 ```
 
 # Running
 
-Access Couchbase server at http://localhost:8091 and configure cluster:
-
-* Cluster name: MAPFRE
-* Password: `password`
-* Create bucket: `policies`
-
-After that, start the AI Agent Bot with:
+Start the AI Agent Bot with:
 
 ```
 ./gradlew bootRun --console=plain --args='--langchain4j.open-ai.chat-model.api-key=PUT_HERE_YOUR_API_KEY'
